@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Dropdown from "../components/Dropdown";
 import type { DropdownItem } from "../components/Dropdown";
 
 export function HomePage() {
+  const navigate = useNavigate();
   const categoryList: DropdownItem[] = [
     { id: 'saving', label: '저축' },
     { id: 'debt', label: '부채' },
@@ -10,9 +12,8 @@ export function HomePage() {
     { id: 'realestate', label: '부동산' },
     { id: 'spending', label: '소비' },
   ];
-
   const handleCategorySelect = (category: DropdownItem) => {
-    alert(`${category.label} 항목을 추가합니다!`);
+    navigate(`/add/${category.id}`);
   };
 
   return (
