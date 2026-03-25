@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "budgetcoach",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-03-25",
+
+  "d1_databases": [
+    {
+      "binding": "assets",
+      "database_name": "asset",
+      "database_id": "874a2dbe-a4ca-4801-b58c-ab3cdeb0b5fe",
+      "preview_database_id": "874a2dbe-a4ca-4801-b58c-ab3cdeb0b5fe",
+      "remote": true
+    }
+  ]
+}
