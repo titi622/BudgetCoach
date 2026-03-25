@@ -8,7 +8,9 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       .prepare(`SELECT * FROM tb_earning`)
       .all();
 
-    return Response.json(results);
+    return new Response(JSON.stringify(results), {
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        });
   } catch (error) {
     return new Response(
       JSON.stringify({
