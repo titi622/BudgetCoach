@@ -9,5 +9,5 @@ export const router = createBrowserRouter([
   { path: "/", element: <LoginPage /> },
   { path: "/home", element: <HomePage /> },
   { path: "/add/:category", element: <AssetInputPage /> },
-  { path: "/api/test", element: <QueryTest /> },
+  { path: "/test", element: <QueryTest /> },
 ]);
